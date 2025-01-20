@@ -1,0 +1,61 @@
+﻿@page
+@model Pages.IndexModel
+
+@{
+    var omegaToolbarItem = new
+    {
+        template = @"<button class='e-tbar-btn' onclick='addOmegaSymbol()'>
+                        <div style='font-size: 18px'>&#937</div>
+                     </button>",
+        tooltipText = "Insert Symbol",
+    };
+
+    var tools = new object[] {
+        "Bold", "Italic", "Underline", "StrikeThrough", "InlineCode", "SuperScript", "SubScript", 
+        "|", "Formats", "Alignments", "OrderedList", "UnorderedList", "|", "CreateLink", "Image", 
+        "|", "Undo", "Redo", "SourceCode", "FullScreen", omegaToolbarItem
+    };
+
+    var link = new object[] { "Open" };
+}
+<div class="rte-container">
+    <ejs-richtexteditor id="rte" width="70%" floatingToolbarOffset="50">
+        <e-richtexteditor-toolbarsettings items="@tools" type="Scrollable" enableFloating="false" />
+        <e-richtexteditor-inlinemode enable="true" onSelection="false"></e-richtexteditor-inlinemode>
+        <e-richtexteditor-quicktoolbarsettings link="@link"/>
+    <e-content-template>
+        <p>
+           The <a href="https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor">Rich Text Editor</a> control is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content.
+           Users can format their content using standard toolbar commands.
+        </p>
+        <p><b> Key features:</b></p>
+        <ul>
+            <li><p> Provides &lt; IFRAME &gt; and &lt; DIV &gt; modes </p></li>
+            <li><p> Capable of handling markdown editing.</p></li>
+            <li><p> Contains a modular library to load the necessary functionality on demand.</p></li>
+            <li><p> Provides a fully customizable toolbar.</p></li>
+            <li><p> Provides HTML view to edit the source directly for developers.</p></li>
+        </ul>
+        <img src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png'
+                 style='width: 300px; height: 300px;' alt='Sky' />
+    </e-content-template>
+</ejs-richtexteditor>
+</div>
+<script>
+    function addOmegaSymbol(){
+        var rte = document.getElementById('rte').ej2_instances[0];
+
+        if (rte.formatter.getUndoRedoStack().length === 0) {
+            rte.formatter.saveData();
+        }
+        rte.executeCommand('insertText', 'Ω');
+        rte.formatter.saveData();
+        rte.formatter.enableUndo(rte);
+    }
+</script>
+<style>
+    .rte-container{
+        display: flex;
+        justify-content: center; 
+    }
+</style>
