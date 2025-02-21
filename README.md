@@ -2,7 +2,7 @@
 
 This quick-start project helps to customize the toolbar in the Syncfusion® [ASP.NET Core Rich Text Editor]( https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor?utm_source=github&utm_medium=listing&utm_campaign=tutorial-videos-aspnetcore-rte-customizetoolbar) control. This example explains how to customize the toolbar types, enable and disable floating toolbars, use inline mode, and customize the quick toolbar for links.
 
-Watch the video: Coming soon…
+Watch the video: [https://www.syncfusion.com/tutorial-videos/aspnet-core/richtexteditor?title=how-to-customize-the-toolbar-in-an-asp-net-core-rich-text-editor](https://www.syncfusion.com/tutorial-videos/aspnet-core/richtexteditor?title=how-to-customize-the-toolbar-in-an-asp-net-core-rich-text)
 
 Refer to the following documentation to learn about the ASP.NET Core RTE control: https://ej2.syncfusion.com/aspnetcore/documentation/rich-text-editor/toolbar#expand-toolbar
 
