@@ -20,3 +20,4 @@ Check out this online example of the ASP.NET Core RTE control: https://ej2.syncf
 * Restore the NuGet packages by rebuilding the solution.
 * Run the project.
 
+>Looking for the full ASP.NET Core Rich Text Editor component overview, features, pricing, and documentation? Visit the [ASP.NET Core Rich Text Editor](https://www.syncfusion.com/aspnet-core-ui-controls/wysiwyg-rich-text-editor) page.
